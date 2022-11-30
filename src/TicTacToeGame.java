@@ -1,10 +1,12 @@
+import java.util.Scanner;
 public class TicTacToeGame {
-   public static char[] uc1() {
-        char[] arr={' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
-        return arr;
-    }
-            public static void main(String[] args){
-              char[] tictactoearr=  uc1();
-            }
-        }
+    static  char[] board = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+   public static void emptyBoard() {
+        System.out.println("Empty Board created");
+        return;
+   }
+    public static void main(String[] args){
+       emptyBoard();
+   }
+}
 
