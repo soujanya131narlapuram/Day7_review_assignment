@@ -46,7 +46,7 @@ public class TicTacToeGame {
             System.out.println("Player chance to start the game");
             prev_player='o';
         } else {
-            System.out.println("Computer chance to start the game");
+            System.out.println("Its Computer chance to start the game");
             prev_player='x';
         }
     }
@@ -107,53 +107,53 @@ public class TicTacToeGame {
                 //pass
             } else {
                 // checking the best position for computer
-                if (board[1] == 'o' && board[2] == 'o' && board[0] != 'x' || board[3] == 'o' && board[6] == 'o' && board[0] != 'x'
-                        || board[4] == 'o' && board[8] == 'o' && board[0] != 'x') {
+                if (board[2] == 'o' && board[3] == 'o' && board[1] != 'x' || board[4] == 'o' && board[7] == 'o' && board[1] != 'x'
+                        || board[5] == 'o' && board[9] == 'o' && board[1] != 'x') {
                     return 1;
-                } else if (board[0] == 'o' && board[2] == 'o' && board[1] != 'x' || board[4] == 'o' && board[7] == 'o' && board[1] != 'x') {
+                } else if (board[1] == 'o' && board[3] == 'o' && board[2] != 'x' || board[5] == 'o' && board[8] == 'o' && board[2] != 'x') {
                     return 2;
-                } else if (board[0] == 'o' && board[1] == 'o' && board[2] != 'x' || board[4] == 'o' && board[6] == 'o' && board[2] != 'x'
-                        || board[5] == 'o' && board[8] == 'o' && board[2] != 'x') {
+                } else if (board[1] == 'o' && board[2] == 'o' && board[3] != 'x' || board[5] == 'o' && board[7] == 'o' && board[3] != 'x'
+                        || board[6] == 'o' && board[9] == 'o' && board[3] != 'x') {
                     return 3;
-                } else if (board[0] == 'o' && board[6] == 'o' && board[3] != 'x' || board[4] == 'o' && board[5] == 'o' && board[3] != 'x') {
+                } else if (board[1] == 'o' && board[7] == 'o' && board[4] != 'x' || board[5] == 'o' && board[6] == 'o' && board[4] != 'x') {
                     return 4;
-                } else if (board[3] == 'o' && board[5] == 'o' && board[4] != 'x' || board[1] == 'o' && board[7] == 'o' && board[4] != 'x'
-                        || board[0] == 'o' && board[8] == 'o' && board[4] != 'x' || board[2] == 'o' && board[6] == 'o' && board[4] != 'x') {
+                } else if (board[4] == 'o' && board[6] == 'o' && board[5] != 'x' || board[2] == 'o' && board[8] == 'o' && board[5] != 'x'
+                        || board[1] == 'o' && board[9] == 'o' && board[5] != 'x' || board[3] == 'o' && board[7] == 'o' && board[5] != 'x') {
                     return 5;
-                } else if (board[2] == 'o' && board[8] == 'o' && board[5] != 'x' || board[3] == 'o' && board[4] == 'o' && board[5] != 'x') {
+                } else if (board[3] == 'o' && board[9] == 'o' && board[6] != 'x' || board[4] == 'o' && board[5] == 'o' && board[6] != 'x') {
                     return 6;
-                } else if (board[0] == 'o' && board[3] == 'o' && board[6] != 'x' || board[7] == 'o' && board[8] == 'o' && board[6] != 'x'
-                        || board[4] == 'o' && board[2] == 'o' && board[6] != 'x') {
+                } else if (board[1] == 'o' && board[4] == 'o' && board[7] != 'x' || board[8] == 'o' && board[9] == 'o' && board[7] != 'x'
+                        || board[5] == 'o' && board[3] == 'o' && board[7] != 'x') {
                     return 7;
-                } else if (board[6] == 'o' && board[8] == 'o' && board[7] != 'x' || board[1] == 'o' && board[4] == 'o' && board[7] != 'x') {
+                } else if (board[7] == 'o' && board[9] == 'o' && board[8] != 'x' || board[2] == 'o' && board[5] == 'o' && board[8] != 'x') {
                     return 8;
-                } else if (board[6] == 'o' && board[7] == 'o' && board[8] != 'x' || board[2] == 'o' && board[5] == 'o' && board[8] != 'x'
-                        || board[0] == 'o' && board[4] == 'o' && board[8] != 'x') {
+                } else if (board[7] == 'o' && board[8] == 'o' && board[9] != 'x' || board[3] == 'o' && board[6] == 'o' && board[9] != 'x'
+                        || board[1] == 'o' && board[5] == 'o' && board[9] != 'x') {
                     return 9;
                 }
                 //These moves are to block the player
-                else if (board[1] == 'x' && board[2] == 'x' && board[0] != 'o' || board[3] == 'x' && board[6] == 'x' && board[0] != 'o'
-                        || board[4] == 'x' && board[8] == 'x' && board[0] != 'o') {
+                else if (board[2] == 'x' && board[3] == 'x' && board[1] != 'o' || board[4] == 'x' && board[7] == 'x' && board[1] != 'o'
+                        || board[5] == 'x' && board[9] == 'x' && board[1] != 'o') {
                     return 1;
-                } else if (board[0] == 'x' && board[2] == 'x' && board[1] != 'o' || board[4] == 'x' && board[7] != 'x' && board[1] != 'o') {
+                } else if (board[1] == 'x' && board[3] == 'x' && board[2] != 'o' || board[5] == 'x' && board[8] != 'x' && board[2] != 'o') {
                     return 2;
-                } else if (board[0] == 'x' && board[1] == 'x' && board[2] != 'o' || board[4] == 'x' && board[6] == 'x' && board[2] != 'o'
-                        || board[5] == 'x' && board[8] == 'x' && board[2] != 'o') {
+                } else if (board[1] == 'x' && board[2] == 'x' && board[3] != 'o' || board[5] == 'x' && board[7] == 'x' && board[3] != 'o'
+                        || board[6] == 'x' && board[9] == 'x' && board[3] != 'o') {
                     return 3;
-                } else if (board[0] == 'x' && board[6] == 'x' && board[3] != 'o' || board[4] == 'x' && board[5] == 'x' && board[3] != 'o') {
+                } else if (board[1] == 'x' && board[7] == 'x' && board[4] != 'o' || board[5] == 'x' && board[6] == 'x' && board[4] != 'o') {
                     return 4;
-                } else if (board[3] == 'x' && board[5] == 'x' && board[4] != 'o' || board[1] == 'x' && board[7] == 'x' && board[4] != 'o'
-                        || board[0] == 'x' && board[8] == 'x' && board[4] != 'o' || board[2] == 'x' && board[6] == 'x' && board[4] != 'o') {
+                } else if (board[4] == 'x' && board[6] == 'x' && board[5] != 'o' || board[2] == 'x' && board[8] == 'x' && board[5] != 'o'
+                        || board[1] == 'x' && board[9] == 'x' && board[5] != 'o' || board[3] == 'x' && board[7] == 'x' && board[5] != 'o') {
                     return 5;
-                } else if (board[2] == 'x' && board[8] == 'x' && board[5] != 'o' || board[3] == 'x' && board[4] == 'x' && board[5] != 'o') {
+                } else if (board[3] == 'x' && board[9] == 'x' && board[6] != 'o' || board[4] == 'x' && board[5] == 'x' && board[6] != 'o') {
                     return 6;
-                } else if (board[0] == 'x' && board[3] == 'x' && board[6] != 'o' || board[7] == 'x' && board[8] == 'x' && board[6] != 'o'
-                        || board[4] == 'x' && board[2] == 'x' && board[4] != 'o') {
+                } else if (board[1] == 'x' && board[4] == 'x' && board[7] != 'o' || board[8] == 'x' && board[9] == 'x' && board[7] != 'o'
+                        || board[5] == 'x' && board[3] == 'x' && board[5] != 'o') {
                     return 7;
-                } else if (board[6] == 'x' && board[8] == 'x' && board[7] != 'o' || board[1] == 'x' && board[4] == 'x' && board[7] != 'o') {
+                } else if (board[7] == 'x' && board[9] == 'x' && board[8] != 'o' || board[2] == 'x' && board[5] == 'x' && board[8] != 'o') {
                     return 8;
-                } else if (board[6] == 'x' && board[7] == 'x' && board[8] != 'o' || board[2] == 'x' && board[5] == 'x' && board[8] != 'o'
-                        || board[0] == 'x' && board[4] == 'x' && board[8] != 'o') {
+                } else if (board[7] == 'x' && board[8] == 'x' && board[9] != 'o' || board[3] == 'x' && board[6] == 'x' && board[9] != 'o'
+                        || board[1] == 'x' && board[5] == 'x' && board[9] != 'o') {
                     return 9;
                 } else {
                     return pos;
